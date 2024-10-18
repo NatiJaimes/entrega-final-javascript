@@ -23,6 +23,6 @@ Para seleccionar el tipo de filamento se generó un archivo .json con un array d
 
 Las partes del formulario que son opcionales se encuentran ocultas hasta seleccionar el botón <b>"Opcional"</b> en cada sección. <br>
 
-Tambien se agregó una sidebar con un historial de Cálculos que trae la información almacenada en el localStorage al seleccionar el botón <b>"Finalizar Cálculo"</b>. Este historial solo muestra los campos que hayan sido cargados en cada trabajo, si el campo está vacio, el mismo no se muestra. <br>
+Tambien se agregó una sidebar con un historial de Cálculos que trae la información que se almacena en el localStorage al seleccionar el botón <b>"Finalizar Cálculo"</b>. Cada registro en este historial solo muestra los campos que hayan sido cargados en cada trabajo, si el campo está vacio, el mismo no se muestra. En el localStorage los registros son items de un array. A toda la información que el usuario carga de forma manual en el formulario se le suma la fecha y hora (con segundos incluidos) provenientes del uso de la libreria Luxon. Esto permite al usuario tener un registro de cuando se cargó ese trabajo en la calculadora.<br>
 
 Los datos que se guardan en la sessionStorage se pueden limpiar haciendo click en el botón <b>"Reiniciar"</b>. Este botón no elimina la información del historial ni de localStorage, y si las secciones opcionales se encuentran visibles, las ocultará como se ven por default. <br>
