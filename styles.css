@@ -1,0 +1,189 @@
+body {
+    font-family: Calibri;
+    display: flex;
+    justify-content: center;
+}
+
+.anchoBody {
+    width: 70%;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+.textoDesc {
+    margin: 15px 10px;
+}
+
+.oculto {
+    display: none;
+}
+
+.costoBase, .costoElectrico, .costoManoObra {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.costoTotal {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.datosBase, .electrOpcional, .manoObrOpcional {
+    margin-bottom: 20px;
+}
+
+.datosBase {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: space-between;
+}
+
+.etiquetaForm, .etiquetaFormNombre, .etiquetaFormFilamento, .etiquetaFormPeso, .etiquetaFormBobiPre, .etiquetaFormBobiPe {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.entradaForm, .entradaFormNombre, .entradaFormFilamento, .entradaFormPeso, .entradaFormBobiPre, .entradaFormBobiPe {
+    margin-bottom: 10px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.etiquetaFormNombre {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.entradaFormNombre {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.etiquetaFormFilamento {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.entradaFormFilamento {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.etiquetaFormPeso {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.etiquetaFormBobiPre {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.etiquetaFormBobiPe {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.entradaFormPeso {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.entradaFormBobiPre {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.entradaFormBobiPe {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+#contenedorElec div {
+    margin: 10px 0px;
+    display: grid;
+    grid-template-columns: 39% 39% 20%;
+    justify-content: space-between;
+}
+
+#contenedorElec label {
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#contenedorManOb div {
+    margin: 15px 0px;
+    display: grid;
+    grid-template-columns: 39% 20% 20% 15%;
+    justify-content: space-between;
+}
+
+#calcular {
+    padding: 10px
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+}
+
+.sidebar #sidebar-content {
+    padding: 15px;
+    color: white;
+}
+
+#openSidebar, #closeSidebar {
+    cursor: pointer;
+}
+
+#openSidebar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#closeSidebar {
+    margin: 0px 10px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+.historial div {
+    border: 1px solid white;
+    padding: 5px 15px;
+    margin: 3px 0px;
+}
+

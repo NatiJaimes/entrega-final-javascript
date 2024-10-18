@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simulador de Presupuesto - Impresión 3D</title>
+</head>
+<body>
+    <section class="anchoBody">
+        <h1>Calculadora de Costos Impresiones 3D</h1>
+        <section>
+            <p class="textoDesc">Te ayudaremos a calcular los gastos relacionados a una impresión 3D.</p>
+            <p class="textoDesc">Cargando datos como los gramos del mismo, el precio de la bobina y la cantidad que trae la misma podrás calcular el costo base de la impresión.</p>
+            <p class="textoDesc">A este valor, podrás agregarle de forma opcional gastos de la electricidad a utilizar o de la mano de obra involucrada de forma previa a la impresión y en el postprocesamiento.</p>
+            <form id="formulario">
+                <div class="datosBase">
+                    <label for="nombreTrabajo" class="etiquetaFormNombre">Nombre del Trabajo:</label>
+                    <input type="text" name="nombreTrabajo" id="nombreTrabajo" class="entradaFormNombre">
+                    <label for="tipoFilamento" class="etiquetaFormFilamento">Tipo de Filamento:</label>
+                    <select name="tipoFilamento" id="tipoFilamento" class="entradaFormFilamento">
+                    </select>
+                    <label for="peso" class="etiquetaFormPeso">Indique cuántos gramos se van a utilizar:</label>
+                    <input type="number" name="peso" id="peso" class="entradaFormPeso">
+                    <label for="bobinaPrecio" class="etiquetaFormBobiPre">¿Cuánto sale la bobina del filamento?</label>
+                    <input type="number" name="bobinaPrecio" id="bobinaPrecio" class="entradaFormBobiPre">
+                    <label for="bobinaPeso" class="etiquetaFormBobiPe">¿Cuántos gramos de filamento trae la bobina a usar?</label>
+                    <input type="number" name="bobinaPeso" id="bobinaPeso" class="entradaFormBobiPe">
+                </div>
+                <div class="electrOpcional">
+                    <p>¿Desea cargar datos de gasto eléctrico? (Consumo de energía en W/Precio de kWh)</p>
+                    <button type="button" id="opcionalElec">Opcional</button>
+                    <div id="contenedorElec" class="oculto">
+                        <div>
+                            <label for="tiempo" class="etiquetaForm">Indique en minutos el tiempo de impresión:</label>
+                            <input type="number" name="tiempo" id="tiempo" class="entradaForm">
+                            <label for="consumo" class="etiquetaForm">Indique el consumo de energía por hora de la impresora en W:</label>
+                            <input type="number" name="consumo" id="consumo" class="entradaForm">
+                            <label for="precioKW" class="etiquetaForm">Indique el precio del kWh:</label>
+                            <input type="number" name="precioKW" id="precioKW" class="entradaForm">
+                        </div>
+                    </div>
+                </div>
+                <div class="manoObrOpcional">
+                    <p>¿Desea cargar gastos de Mano de Obra? (Preparación de Impresión/Postprocesamiento)</p>
+                    <button type="button" id="opcionalManOb">Opcional</button>
+                    <div id="contenedorManOb" class="oculto">
+                        <div>
+                            <label for="tiempoManoObra" class="etiquetaForm">Indique el tiempo en minutos que lleva la preparación de la impresión:</label>
+                            <input type="number" name="tiempoManoObra" id="tiempoManoObra" class="entradaForm">
+                            <label for="costeManoObra" class="etiquetaForm">Indique el valor de su tiempo por hora:</label>
+                            <input type="number" name="costeManoObra" id="costeManoObra" class="entradaForm">
+                            <label for="tiempoPost" class="etiquetaForm">Indique el tiempo en minutos que lleva el postprocesamiento de la impresión:</label>
+                            <input type="number" name="tiempoPost" id="tiempoPost" class="entradaForm">
+                            <label for="costePost" class="etiquetaForm">Indique el valor de su tiempo por hora:</label>
+                            <input type="number" name="costePost" id="costePost" class="entradaForm">
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="calcular">Finalizar Cálculo</button>
+                <p id="totales" class="costoTotal"></p>
+                <button type="button" id="reset">Reiniciar</button>
+            </form>
+        </section>
+        <button id="openSidebar">Abrir Historial</button>
+        <section id="sidebar" class="sidebar">
+            <button id="closeSidebar">Cerrar</button>
+            <h2>Historial de Trabajos</h2>
+            <div id="sidebar-content">
+                <div id="historial" class="historial"></div>
+            </div>
+        </section>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.0/build/global/luxon.min.js"></script>
+    <script src="calculadora.js"></script>
+</body>
+</html>
